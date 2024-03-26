@@ -1,0 +1,180 @@
+main{
+    height: auto;
+    justify-content: normal;
+}
+
+
+.sign3{
+    width: 100%;
+    padding: 2vh 0;
+    margin: .5vh 0;
+}
+
+.info_header{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.info_header img{
+    height: auto;
+    width: 20%;
+}
+
+.info_labo {
+    height: 100%;
+    color: var(--couleur1);
+    font-size: 1em;
+}
+
+.info_large{
+    margin: 2vh 0 0;
+    display: flex;
+    text-align: left;
+    height: max-content;
+    border-left: 1px solid var(--couleur1);
+}
+
+.info_ordonnance{
+    width: 50%;
+    margin: 0 0 2vh;
+}
+
+.info_ordonnance .info_labo,
+.info_large .info_labo {
+    width: 100%;
+    border: 1px solid var(--couleur1);
+    border-left: none;
+    padding: 1vh 1vw;
+}
+
+.info_ordonnance .info_labo{
+    border-top: none;
+    border-left: 1px solid var(--couleur1);
+}
+
+.a4_container {
+    width: 100%; /* La largeur occupe 100% de la largeur du conteneur parent */
+    max-width: 21cm; /* La largeur maximale est de 21 centimètres (A4) */
+    background-color: #fff; /* Couleur de fond de la feuille A4 */
+    box-sizing: border-box; /* Inclut les bordures et les rembourrages dans la taille totale */
+    border: 1px solid #000; /* Bordure de la div, facultatif */
+    margin: 0 auto; /* Centre la div horizontalement sur la page, si nécessaire */
+    padding: 1cm; /* Ajoute un espace intérieur d'1 centimètre pour laisser un espace autour du contenu */
+    position: relative;
+}
+
+.container_page{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.analyses h2{
+    color: var(--couleur1);
+    font-size: 1.3em;
+    margin: 1vh 0 0;
+    text-transform: uppercase;
+}
+
+.analyses h3{
+    color: var(--couleur2);
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-left: 1vw;
+}
+
+.p_avg,
+.analyses p{
+    color: var(--couleur2);
+    font-size: 1.0em;
+    text-transform: uppercase;
+    margin-left: 1vw;
+}
+
+.p_avg{
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.p_avg div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p_avg p{
+    text-align: center;
+    width: max-content;
+}
+
+.div_btn{
+    margin: 3vh 0 0;
+}
+
+
+.div_value,
+.div_avg,
+.div_resultats,
+.ligneOperation{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.div_value,
+.div_avg{
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.div_resultats{
+    width: 30%;
+}
+
+.ligneOperation{
+    margin: 1vh 0;
+}
+
+.div_resultats input{
+    margin-left: 1em;
+    color: var(--couleur1);
+    background-color: var(--couleur3);
+    border-radius: 3px;
+    border: none;
+    padding: .5vh;
+    width: 4em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.div_resultats input[type="time"]{
+    width: 6em;
+}
+
+.div_resultats input[type="text"]{
+    width: 15em;
+}
+
+/* Styles spécifiques pour l'impression */
+@media print {
+    .a4_container {
+        margin: 0; /* Réinitialise la marge pour l'impression */
+        border: none; /* Supprime la bordure pour l'impression */
+        box-shadow: none; /* Supprime l'ombre pour l'impression, si nécessaire */
+        page-break-before: always; /* Assure une pause avant chaque page lors de l'impression */
+    }
+
+    .div_btn{
+        display: none;
+    }
+}

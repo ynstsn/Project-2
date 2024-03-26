@@ -1,0 +1,174 @@
+.info {
+  height: 100%;
+}
+
+.main_content_analyses {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--couleur1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.content_analyses {
+  position: relative;
+  background-color: var(--couleur4);
+  width: max-content;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 0;
+  align-items: center;
+  border-radius: 5px;
+  --input-bg: #FFf;
+  --padding: 1.5em;
+  --rotate: 80deg;
+  --gap: 2em;
+  --icon-change-color: #15A986;
+  --height: 40px;
+}
+
+.content_analyses h1 {
+  text-align: center;
+}
+
+.content_analyses_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content_analyses_choix {
+  width: 100%;
+  height: 100%;
+}
+
+.content_analyses_choisi {
+  width: 100%;
+}
+
+
+.content_analyses label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--height);
+}
+
+.content_analyses input {
+  width: 100%;
+  padding-inline-start: calc(var(--padding) + var(--gap));
+  outline: none;
+  background: none;
+  border: 0;
+}
+
+.content_analyses svg {
+  color: #111;
+  transition: 0.3s cubic-bezier(.4, 0, .2, 1);
+  position: absolute;
+  height: 15px;
+}
+
+.icon {
+  position: absolute;
+  left: var(--padding);
+  transition: 0.3s cubic-bezier(.4, 0, .2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swap-off {
+  transform: rotate(-80deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  right: calc(var(--padding) - var(--gap));
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+}
+
+.content_analyses input:focus~.icon {
+  transform: rotate(var(--rotate)) scale(1.3);
+}
+
+.content_analyses input:focus~.icon .swap-off {
+  opacity: 1;
+  transform: rotate(-80deg);
+  visibility: visible;
+  color: var(--icon-change-color);
+}
+
+.content_analyses input:focus~.icon .swap-on {
+  opacity: 0;
+  visibility: visible;
+}
+
+.content_analyses input:valid~.icon {
+  transform: scale(1.3) rotate(var(--rotate))
+}
+
+.content_analyses input:valid~.icon .swap-off {
+  opacity: 1;
+  visibility: visible;
+  color: var(--icon-change-color);
+}
+
+.content_analyses input:valid~.icon .swap-on {
+  opacity: 0;
+  visibility: visible;
+}
+
+.content_analyses input:valid~.close-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: 0s;
+}
+
+.choix {
+  height: 100%;
+  width: max-content;
+  overflow: auto;
+}
+
+.choix div {
+  border-bottom: 1px solid var(--couleur1);
+  padding: 1vh 1vw;
+  width: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.choix div:hover {
+  background-color: var(--couleur3);
+}
+
+.add {
+  background-color: var(--success);
+}

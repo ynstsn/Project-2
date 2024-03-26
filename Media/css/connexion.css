@@ -1,0 +1,132 @@
+main {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 50vh;
+    min-width: 300px;
+    border-radius: 0.75rem;
+    background-color: var(--couleur4);
+    padding: 2rem;
+    color: var(--couleur2);
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.form {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    color: var(--couleur2);
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1px solid var(--couleur2);
+    outline: 0;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    color: var(--couleur2);
+}
+
+.input-group input:focus {
+    border: 1.5px solid var(--couleur1);
+}
+
+.sign {
+    display: block;
+    width: 100%;
+    background-color: var(--couleur1);
+    padding: 0.75rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--couleur4);
+    transition: all .3s;
+    margin-top: 2vh;
+}
+
+.sign:hover {
+    background-color: var(--couleur2);
+}
+
+.social-message {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: var(--couleur4);
+
+}
+
+.social-message .message {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--couleur4);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+}
+
+.social-icons .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: var(--couleur4);
+    cursor: pointer;
+}
+
+.social-icons .icon svg *{
+    fill: var(--couleur4);
+}
+
+.signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--couleur5);
+}
+
+.div_error{
+    position: absolute;
+    top: 15vh;
+    width: 30vw;
+    height: max-content;
+}
